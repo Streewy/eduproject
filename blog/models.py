@@ -16,6 +16,9 @@ class Blog(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='media/blogresimleri/%Y/%m/%d', default='media/blogresimleri/blog.jpg')
-
+    slug = models.SlugField(max_length=80, null=True, help_text=u"Link, otomatik alinir. Degistirmeyiniz!")
+    link = models.URLField(blank=True)
+    video = models.FileField(upload_to='blogvideolari/%Y/%m/%d', blank=True)
+    
     def __unicode__(self):
         return '{}'.format(self.title)
