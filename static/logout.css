@@ -1,0 +1,22 @@
+html,
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logout{
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.logout .logout-text{
+    font-size: 20px;
+    font-family: inherit;
+}
+
+.logout .i1{
+}

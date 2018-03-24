@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="static/favicon.ico">
+    <link rel="icon" href="/static/favicon.ico">
 
     <title>Login</title>
 
@@ -19,7 +19,7 @@
   <body class="text-center">
     <form class="form-signin" method="POST">
       {% csrf_token %}
-	  <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+	  <a href="/"><img class="mb-4" src="/static/bootstrap-solid.svg" alt="" width="72" height="72"></a>
       <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
       <input type="text" id="userName" name="username" class="form-control" placeholder="User Name" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
@@ -28,6 +28,10 @@
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
+        <div>
+          <a href = "/password_reset">Forgot password?</a>
+          <p> Not a member? Please <a href="/register">register.</a></p>
+        </div>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>

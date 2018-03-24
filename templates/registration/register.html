@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Register</title>
+    <head>
+        <title>Register</title>
 
-    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="icon" href="/static/favicon.ico">
+        <link href="/static/register.css" rel="stylesheet">
+    </head>
+    <body class="text-center">
 
-    <link href="/static/register.css" rel="stylesheet">
-</head>
-<body class="text-center">
-
-    <form class="form-signin" method="POST">
-        {% csrf_token %} 
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      	<h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
-        {% for field in form %}
-        	<p>
-        		{{ field.label_tag }}<br>
-        		<input type="text" id="{{ field.name }}" name="{{ field.name }}" class="form-control" placeholder="{{ field.label }}" required autofocus>
-        		
-        		{% if field.help_text %}
-        			<small style = "color: grey"> {{ field.help_text }}</small>
-        		{% endif %}
-        		{% for error in field.errors %}
-        			<p style="color: red"> {{ error }}</p>
-        		{% endfor %}
-        	</p>
-        {% endfor %}
-
-      <!--<input type="text" id="userName" name="username" class="form-control" placeholder="User Name" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required></!-->
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-
-    </form>
-
-</body>
+        <form class="form-signin" method="POST">
+            {% csrf_token %}
+            <a href="/"><img class="mb-4" src="/static/bootstrap-solid.svg" alt="" width="72" height="72"></a>
+      	    <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+            <input type="text" id="{{ form.username.name }}" name="{{ form.username.name }}" class="form-control" placeholder="{{ form.username.label }}" required autofocus>
+            <input type="text" id="{{ form.email.name }}" name="{{ form.email.name }}" class="form-control" placeholder="{{ form.email.label }}" required autofocus>
+            <input type="password" id="{{ form.password.name }}" name="{{ form.password.name }}" class="form-control" placeholder="{{ form.password.label }}" required autofocus>
+		    <br>
+		    Already registered? Please <a href="/login">login.</a>
+		    <br><br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+	        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+        </form>
+    </body>
 </html>

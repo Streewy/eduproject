@@ -1,5 +1,4 @@
 html,
-
 body {
   height: 100%;
 }
@@ -24,17 +23,6 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
-  text-align: left;
-}
-
-.form-signin .mb-4 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.form-signin .h3{
-  text-align: center;
 }
 
 .form-signin .checkbox {
@@ -49,14 +37,4 @@ body {
 }
 .form-signin .form-control:focus {
   z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
