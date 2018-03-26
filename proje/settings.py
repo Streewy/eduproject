@@ -41,7 +41,15 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = 'smtp.yandex.com.tr'
+EMAIL_HOST_USER = 'cse.canerbostanci@yandex.com'
+EMAIL_HOST_PASSWORD = 'sifre'
+DEFAULT_FROM_EMAIL = 'cse.canerbostanci@yandex.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
